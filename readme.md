@@ -166,3 +166,8 @@ jenkins-remoting-project/
     ├── 04-console-agent-2.png
     └── 05-node-configure.png
 ```
+## 10. Author
+
+**Kabita Maharana**
+Email: kabitamahara567@gmail.com
+CodeAlpha Internship, Task 2
