@@ -1,0 +1,29 @@
+services:
+  jenkins:
+    image: jenkins/jenkins:lts
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - jenkins_home:/var/jenkins_home
+
+  agent-amd64:
+    image: jenkins/inbound-agent
+    environment:
+      - JENKINS_URL=http://jenkins:8080
+      - JENKINS_AGENT_NAME=agent-amd64
+      - JENKINS_SECRET=${AGENT_AMD64_SECRET}
+    depends_on:
+      - jenkins
+
+  agent-2:
+    image: jenkins/inbound-agent
+    environment:
+      - JENKINS_URL=http://jenkins:8080
+      - JENKINS_AGENT_NAME=agent-2
+      - JENKINS_SECRET=${AGENT_2_SECRET}
+    depends_on:
+      - jenkins
+
+volumes:
+  jenkins_home:
