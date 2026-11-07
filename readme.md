@@ -1,4 +1,4 @@
-# Jenkins Remoting Project: Controller + Remote Agents
+# CodeAlpha Jenkins Remoting Project: Controller + Remote Agents
 
 This project sets up a Jenkins controller that runs **no builds itself** and delegates all work to **remote agents** connected through Jenkins **Remoting** (inbound / "Launch agent by connecting it to the controller").
 
@@ -145,7 +145,7 @@ The `sleep` keeps each build running long enough to observe parallel execution. 
 ![Console agent-2](screenshots/04-console-agent-2.png)
 
 ### Node configuration (label + only matching label + inbound launch)
-![Node configure](screenshots/05-node-configure.png)
+![Node configure](screenshots/05-node-configure.webp)
 
 ## 8. Other architectures (arm64): not done yet
 
